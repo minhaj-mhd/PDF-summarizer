@@ -1,0 +1,16 @@
+#common
+fastapi
+uvicorn
+python-dotenv
+sqlalchemy
+
+#auth
+asyncpg
+psycopg2-binary
+passlib[bcrypt]
+python-jose
+
+#document
+pymongo
+motor
+pymupdf
