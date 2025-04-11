@@ -14,3 +14,11 @@ python-jose
 pymongo
 motor
 pymupdf
+
+#summerizer
+transformers
+pydantic
+torch
+pymongo
+celery
+redis
