@@ -25,6 +25,13 @@ def generate_summary(text: str) -> str:
             print(f"Summarization Error {e}")
     return " ".join(summaries)
 
+def get_summary_text(doc_id:str):
+    try:
+        text = db.summaries.find_one({"document_id":ObjectId(doc_id)})
+        return (text["summary"])
+    except Exception as e:
+        print("Error")
+
 @celery.task(name = "app.generator.summarize_document")
 def summarize_document(document_id:str, content:str):
     summary = generate_summary(content)
